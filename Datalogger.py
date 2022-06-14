@@ -36,6 +36,7 @@ def DataToServer(DataMeassured):
    print (ws.recv())
 
 
+   
 while True:
    
    #for testing purpose
