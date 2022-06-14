@@ -15,6 +15,8 @@ GPIO.setup(MSensor,GPIO.IN)
 
 i2c = busio.I2C(board.SCL, board.SDA)
 
+ws = create_connection("ws://172.20.10.3:3001")
+
 #meassure data and store it in data
 def MessureData():
    data = ''
@@ -35,7 +37,6 @@ def DataToServer(DataMeassured):
    ws.send(DataMeassured)
    print (ws.recv())
 
-ws = create_connection("ws://172.20.10.3:3001")
 
 while True:
    
