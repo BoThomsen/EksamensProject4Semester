@@ -15,7 +15,7 @@ GPIO.setup(MSensor,GPIO.IN)
 
 i2c = busio.I2C(board.SCL, board.SDA)
 
-#messure data and store it in data
+#meassure data and store it in data
 def MessureData():
    data = ''
    if GPIO.input(MSensor):
@@ -42,7 +42,7 @@ while True:
    #for testing purpose
    testPrompt = input("y/n")
    
-   #the program fetches messured data and sends it to the DataToServer Function
+   #the program fetches meassured data and sends it to the DataToServer Function
    if testPrompt == "y":
       #waiting a hour to execute and
       #time.sleep(3600)
