@@ -31,8 +31,8 @@ def MessureData():
    
    
 #sending data to webServer and recieves a message   
-def DataToServer(DataMessured):
-   ws.send(DataMessured)
+def DataToServer(DataMeassured):
+   ws.send(DataMeassured)
    print (ws.recv())
 
 ws = create_connection("ws://172.20.10.3:3001")
@@ -48,8 +48,8 @@ while True:
       #time.sleep(3600)
       GPIO.output(6,False)
       time.sleep(2)
-      DataMessured = MessureData()
-      DataToServer(DataMessured)
+      DataMeassured = MeassureData()
+      DataToServer(DataMeassured)
       GPIO.output(6,True)
    if testPrompt == "n":
       break;
