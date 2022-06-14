@@ -7,14 +7,12 @@ from websocket import create_connection
 
 #sets up all the equipment
 MSensor = 21
-
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(27,GPIO.OUT)
 GPIO.setup(6,GPIO.OUT)
 GPIO.setup(MSensor,GPIO.IN)
 
 i2c = busio.I2C(board.SCL, board.SDA)
-
 ws = create_connection("ws://172.20.10.3:3001")
 
 #meassure data and store it in data
